@@ -1,20 +1,20 @@
-actor = Actor.new({first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock"})
-actor.save
+# actor = Actor.new({first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock"})
+# actor.save
 
-actor = Actor.new({first_name: "Angelina", last_name: "Jolie", known_for: "Lara Croft: Tomb Raider"})
-actor.save
+# actor = Actor.new({first_name: "Angelina", last_name: "Jolie", known_for: "Lara Croft: Tomb Raider"})
+# actor.save
 
-actor = Actor.new({first_name: "Jennifer", last_name: "Aniston", known_for: "Friends"})
-actor.save
+# actor = Actor.new({first_name: "Jennifer", last_name: "Aniston", known_for: "Friends"})
+# actor.save
 
-actor = Actor.new({first_name: "Natalie", last_name: "Portman", known_for: "Black Swan"})
-actor.save
-
-
-
-
-
-
+# actor = Actor.new({first_name: "Natalie", last_name: "Portman", known_for: "Black Swan"})
+# actor.save
+require 'ffaker'
+ 
+6.times do
+  actor = Actor.new({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title})
+  actor.save
+end
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
