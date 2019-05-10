@@ -9,12 +9,22 @@
 
 # actor = Actor.new({first_name: "Natalie", last_name: "Portman", known_for: "Black Swan"})
 # actor.save
-require 'ffaker'
+# require 'ffaker'
  
-6.times do
-  actor = Actor.new({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title})
-  actor.save
+# 6.times do
+#   actor = Actor.new({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title})
+#   actor.save
+# end
+
+require 'ffaker'
+
+7.times do
+  movie = Movie.new({title: FFaker::Movie.title, year: FFaker::Vehicle.year, plot: FFaker::Lorem.paragraph})
+  movie.save
 end
+
+
+
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
