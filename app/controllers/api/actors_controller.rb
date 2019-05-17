@@ -16,8 +16,11 @@ class Api::ActorsController < ApplicationController
       @actor.known_for = params[:known_for] || @actor.known_for
       @actor.gender = params[:gender] || @actor.gender
       @actor.age = params[:age] || @actor.age
-    @actor.save
-    render 'show.json.jbuilder'
+    if @actor.save
+      render 'show.json.jbuilder'
+    else
+      render json: {errors: @actor.errors.full_messages}, status: :unprocesable_entity
+    end 
   end
 
   def create
@@ -27,8 +30,11 @@ class Api::ActorsController < ApplicationController
       known_for: params[:known_for], gender: params[:gender], age: params[:age]
       )
     
-    @actor.save
-    render 'show.json.jbuilder'
+    if @actor.save
+      render 'show.json.jbuilder'
+    else 
+      render json: {errors: @actor.errors.full_messages}, status: :unprocesable_entity
+    end
   end
 
    def destroy
