@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     post "/actors" => "actors#create"
 
     delete "/actors/:id" => "actors#destroy"
+
+    post "/users" => "users#create"
+
+    post "/sessions" => "sessions#create"
   end
   # EXAMPLE HTML ROUTE
   # get "/photos" => "photos#index"
