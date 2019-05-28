@@ -23,7 +23,9 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
 
     post "/sessions" => "sessions#create"
-  end
+
+    post "/movie_genres" => "movie_genres#create"
+  end 
   # EXAMPLE HTML ROUTE
   # get "/photos" => "photos#index"
 
