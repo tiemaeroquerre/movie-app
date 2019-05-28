@@ -1,4 +1,3 @@
-Actor.create!([
   {first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock", gender: "M", age: 34, movie_id: 1},
   {first_name: "Kelly", last_name: "Clarkson", known_for: "The View", gender: "F", age: 29, movie_id: 2},
   {first_name: "Shelby", last_name: "Murphy", known_for: "The Fake Diaries with a Thousand Faces", gender: "F", age: 57, movie_id: 8},
