@@ -10,7 +10,8 @@ def index
 
   def show
     @movie = Movie.find(params[:id])
-    render 'show.json.jbuilder'
+    render 'show.html.erb'
+    #used to be render 'show.json.jbuilder'
   end
 
   def update
