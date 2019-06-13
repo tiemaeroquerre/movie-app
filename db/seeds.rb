@@ -13,6 +13,33 @@ Movie.create!([
   {title: "Flying Cousins", year: 1989, plot: "Two cousins discover the joy of flying.", director: "Noland Bushwick", english: true}
 ])
 
+Genre.create!([
+  {name: "thriller"},
+  {name: "romance"},
+  {name: "comedy"},
+  {name: "action"},
+  {name: "horror"},
+  {name: "documentary"},
+  {name: "adventure"},
+  {name: "drama"}
+])
+
+MovieGenre.create!([
+  {genre_id: 1, movie_id: 2},
+  {genre_id: 5, movie_id: 1},
+  {genre_id: 8, movie_id: 11},
+  {genre_id: 4, movie_id: 3},
+  {genre_id: 1, movie_id: 4},
+  {genre_id: 5, movie_id: 6},
+  {genre_id: 8, movie_id: 5},
+  {genre_id: 7, movie_id: 7},
+  {genre_id: 4, movie_id: 8},
+  {genre_id: 6, movie_id: 9},
+  {genre_id: 1, movie_id: 10},
+  {genre_id: 2, movie_id: 14},
+  {genre_id: 7, movie_id: 14}
+  ])
+
 Actor.create!([
   {first_name: "Kelly", last_name: "Clarkson", known_for: "The View", gender: "F", age: 29, movie_id: 2},
   {first_name: "Shelby", last_name: "Murphy", known_for: "The Fake Diaries with a Thousand Faces", gender: "F", age: 57, movie_id: 8},
@@ -34,31 +61,8 @@ Actor.create!([
   {first_name: "George", last_name: "Clooney", known_for: "Big Fish", gender: "M", age: 52, movie_id: 14},
   {first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock", gender: "M", age: 34, movie_id: 3}
 ])
-Genre.create!([
-  {name: "thriller"},
-  {name: "romance"},
-  {name: "comedy"},
-  {name: "action"},
-  {name: "horror"},
-  {name: "documentary"},
-  {name: "adventure"},
-  {name: "drama"}
-])
-MovieGenre.create!([
-  {genre_id: 1, movie_id: 2},
-  {genre_id: 5, movie_id: 1},
-  {genre_id: 8, movie_id: 11},
-  {genre_id: 4, movie_id: 3},
-  {genre_id: 1, movie_id: 4},
-  {genre_id: 5, movie_id: 6},
-  {genre_id: 8, movie_id: 5},
-  {genre_id: 7, movie_id: 7},
-  {genre_id: 4, movie_id: 8},
-  {genre_id: 6, movie_id: 9},
-  {genre_id: 1, movie_id: 10},
-  {genre_id: 2, movie_id: 14},
-  {genre_id: 7, movie_id: 14}
-])
+
+
 User.create!([
   {name: "Jordan Piper", email: "piper@gmail.com", password_digest: "$2a$10$5173e.E5ttS.86DCia2RuO02hlXAQktBn0TekNApPF1ruFGCiJp8i", admin: nil},
   {name: "Marcus Wright ", email: "wright@gmail.com", password_digest: "$2a$10$3TqAMThZPGjDxJIHduxSM.ipJORZGuY03HpLPV80jPKAhodq94rfy", admin: nil},
