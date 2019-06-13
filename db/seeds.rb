@@ -36,8 +36,8 @@ MovieGenre.create!([
   {genre_id: 4, movie_id: 8},
   {genre_id: 6, movie_id: 9},
   {genre_id: 1, movie_id: 10},
-  {genre_id: 2, movie_id: 14},
-  {genre_id: 7, movie_id: 14}
+  {genre_id: 2, movie_id: 12},
+  {genre_id: 7, movie_id: 12}
   ])
 
 Actor.create!([
@@ -50,7 +50,7 @@ Actor.create!([
   {first_name: "Lady", last_name: "Rempel", known_for: "When Leota Met Chasidy", gender: "F", age: 13, movie_id: 2},
   {first_name: "Natalie", last_name: "Portman", known_for: "Black Swan", gender: "F", age: 12, movie_id: 4},
   {first_name: "Jennifer", last_name: "Aniston", known_for: "Friends", gender: "F", age: 44, movie_id: 3},
-  {first_name: "Leanna", last_name: "Renolds", known_for: "Foxy Mama", gender: "F", age: 21, movie_id: 14},
+  {first_name: "Leanna", last_name: "Renolds", known_for: "Foxy Mama", gender: "F", age: 21, movie_id: 12},
   {first_name: "Brent", last_name: "Formand", known_for: "Cats", gender: "M", age: 22, movie_id: 11},
   {first_name: "Andy", last_name: "Bodart", known_for: "Frak", gender: "M", age: 12, movie_id: 9},
   {first_name: "Sheldon", last_name: "Koch", known_for: "A Fistful of Bloody Diaries", gender: "M", age: 45, movie_id: 9},
@@ -58,7 +58,7 @@ Actor.create!([
   {first_name: "Clarice", last_name: "Harvey", known_for: "Christmas on Diane Causeway", gender: "M", age: 47, movie_id: 4},
   {first_name: "Wesley", last_name: "VonRueden", known_for: "The Ninja with a Thousand Faces", gender: "M", age: 54, movie_id: 5},
   {first_name: "Georgia", last_name: "Clarkson", known_for: "Family Guy", gender: "F", age: 27, movie_id: 6},
-  {first_name: "George", last_name: "Clooney", known_for: "Big Fish", gender: "M", age: 52, movie_id: 14},
+  {first_name: "George", last_name: "Clooney", known_for: "Big Fish", gender: "M", age: 52, movie_id: 12},
   {first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock", gender: "M", age: 34, movie_id: 3}
 ])
 
