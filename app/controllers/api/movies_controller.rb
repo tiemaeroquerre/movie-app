@@ -1,6 +1,6 @@
 class Api::MoviesController < ApplicationController
 
-  before_action :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_admin, except: [:index, :show]
 
 def index
     # @movies = Movie.all   
@@ -10,7 +10,7 @@ def index
 
   def show
     @movie = Movie.find(params[:id])
-    render 'show.html.erb'
+    render 'show.json.jbuilder'
     #used to be render 'show.json.jbuilder'
   end
 
@@ -32,7 +32,9 @@ def index
     @movie = Movie.new(
       title: params[:title],
       year: params[:year],
-      plot: params[:plot], director: params[:director], english: params[:english]
+      plot: params[:plot], 
+      director: params[:director], 
+      english: params[:english]
       )
     
     if @movie.save
